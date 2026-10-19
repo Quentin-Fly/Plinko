@@ -1,0 +1,58 @@
+{
+    "version": 1,
+    "name": "PinkoControls",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "88cefb2a-46d6-4550-89b2-bae907d4b43a",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "ea959e01-5085-456e-b559-b31d85197cc0",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "76ba503b-feba-4f2e-ab90-2289e63ac927",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "b67203f1-8975-4743-823e-eb76fea65c7a",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "40bf36af-1972-466a-be0c-58e6e067cd46",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
