@@ -13,6 +13,9 @@ public class BallSpawner : MonoBehaviour
 
     public InputActionReference dropAction;
 
+    public float cooldown = 1f;
+    private float prochainLancement  = 0f;
+
     // Appelée au démarrage
     void Start()
     {
@@ -49,9 +52,10 @@ public class BallSpawner : MonoBehaviour
         float clampedX = Mathf.Clamp(transform.position.x, -3.5f, 3.5f);
         transform.position = new Vector3(clampedX, transform.position.y, transform.position.z);
 
-        if (dropAction.action.WasPressedThisFrame())
+        if (dropAction.action.WasPressedThisFrame() && Time.time >= prochainLancement)
         {
             SpawnBall();
+            prochainLancement = Time.time + cooldown;
         }
     }
 }
