@@ -25,6 +25,7 @@ public class ScoreZone : MonoBehaviour
                     points = 0;
                     break;
             }
+            balle.scoreManager.AddScore(points);
             Debug.Log("Bille détectée : " + points + " points !");
             Destroy(balle.gameObject);
         }
